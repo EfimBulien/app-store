@@ -1,0 +1,103 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 13",
+      "category": "iPhone 13 Series",
+      "price": 799,
+      "description": "The latest iPhone with advanced features.",
+      "image": "images/iphone13.jpg"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 13 Pro",
+      "category": "iPhone 13 Series",
+      "price": 999,
+      "description": "The professional iPhone with enhanced camera.",
+      "image": "images/iphone13pro.jpg"
+    },
+    {
+      "id": 3,
+      "name": "iPhone 13 Pro Max",
+      "category": "iPhone 13 Series",
+      "price": 1099,
+      "description": "The ultimate iPhone with a larger display.",
+      "image": "images/iphone13promax.jpg"
+    },
+    {
+      "id": 4,
+      "name": "iPhone 12",
+      "category": "iPhone 12 Series",
+      "price": 699,
+      "description": "The previous new generation iPhone 12",
+      "image": "images/iphone12.jpg"
+    },
+    {
+      "id": 5,
+      "name": "iPhone 12 Pro",
+      "category": "iPhone 12 Series",
+      "price": 899,
+      "description": "The professional iPhone of the previous generation.",
+      "image": "images/iphone12pro.jpg"
+    },
+    {
+      "id": 6,
+      "name": "iPhone 12 Pro Max",
+      "category": "iPhone 12 Series",
+      "price": 999,
+      "description": "The ultimate iPhone of the previous generation.",
+      "image": "images/iphone12promax.jpg"
+    },
+    {
+      "id": 7,
+      "name": "iPhone 11",
+      "category": "iPhone 11 Series",
+      "price": 599,
+      "description": "The affordable iPhone with essential features.",
+      "image": "images/iphone11.jpg"
+    },
+    {
+      "id": 8,
+      "name": "iPhone 11 Pro",
+      "category": "iPhone 11 Series",
+      "price": 799,
+      "description": "The professional iPhone with a powerful camera.",
+      "image": "images/iphone11pro.jpg"
+    },
+    {
+      "id": 9,
+      "name": "iPhone 11 Pro Max",
+      "category": "iPhone 11 Series",
+      "price": 899,
+      "description": "The ultimate iPhone with the largest display.",
+      "image": "images/iphone11promax.jpg"
+    },
+    {
+      "id": 10,
+      "name": "iPhone SE (2022)",
+      "category": "iPhone SE",
+      "price": 399,
+      "description": "The budget-friendly iPhone with modern performance.",
+      "image": "images/iphonese.jpg"
+    }
+  ],
+  "favorites": [],
+  "cart": [
+    {
+      "id": 10,
+      "name": "iPhone SE (2022)",
+      "category": "iPhone SE",
+      "price": 399,
+      "description": "The budget-friendly iPhone with modern performance.",
+      "image": "images/iphonese.jpg"
+    },
+    {
+      "id": 1,
+      "name": "iPhone 13",
+      "category": "iPhone 13 Series",
+      "price": 799,
+      "description": "The latest iPhone with advanced features.",
+      "image": "images/iphone13.jpg"
+    }
+  ]
+}
