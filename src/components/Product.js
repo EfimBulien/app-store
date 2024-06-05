@@ -42,29 +42,17 @@ function Product() {
     <Container className="d-flex flex-column flex-grow-1">
       <Row className="my-4">
         <Col md={6}>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <img src={`/images/${product.image}`} alt={product.name} className="product-image" />
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+            <img src={`/${product.image}`} alt={product.name} className="product-image" style={{ maxWidth: '100%', height: 'auto' }} />
           </motion.div>
         </Col>
         <Col md={6}>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <h2>{product.name}</h2>
-            <p>{product.description}</p>
+            <p>Описание: {product.description}.</p>
             <p><strong>${product.price}</strong></p>
-            <Button variant="primary" onClick={addToFavorites} className="mr-2">
-              Добавить в избранные
-            </Button>
-            <Button variant="success" onClick={addToCart}>
-              В корзину
-            </Button>
+            <Button variant="primary" onClick={addToFavorites}>Добавить в избранные</Button>
+            <Button variant="success" onClick={addToCart} className="m-2">В корзину</Button>
           </motion.div>
         </Col>
       </Row>

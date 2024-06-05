@@ -7,17 +7,25 @@ function Favorites() {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/favorites').then(response => {
-      setFavorites(response.data);
-    });
+    axios.get('http://localhost:5000/favorites')
+      .then(response => {
+        setFavorites(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching favorites:', error);
+      });
   }, []);
 
   return (
-    <Container>
+    <Container className="d-flex flex-column flex-grow-1">
       <Row className="my-4">
         <Col>
           <h2>Избранные товары</h2>
-          <ProductList products={favorites} />
+          {favorites.length > 0 ? (
+            <ProductList products={favorites} />
+          ) : (
+            <p>Нет избранных товаров.</p>
+          )}
         </Col>
       </Row>
     </Container>
