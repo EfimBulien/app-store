@@ -45,6 +45,7 @@ function ProductList({ limit, searchTerm, category, products }) {
               <Card.Text><i>«{product.description}»</i></Card.Text>
               <Card.Text><strong>${product.price}</strong></Card.Text>
               <Button as={Link} to={`/product/${product.id}`} variant="primary">Купить</Button>
+              <Button as={Link} to={`/product/${product.id}`} variant="success" className="m-2">В корзину</Button>
             </Card.Body>
           </Card>
         </motion.div>

@@ -23,9 +23,7 @@ function Favorites() {
           <h2>Избранные товары</h2>
           {favorites.length > 0 ? (
             <ProductList products={favorites} />
-          ) : (
-            <p>Нет избранных товаров.</p>
-          )}
+          ) : ( <p>Нет избранных товаров.</p> )}
         </Col>
       </Row>
     </Container>

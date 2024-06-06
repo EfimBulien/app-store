@@ -50,6 +50,9 @@ function Product() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <h2>{product.name}</h2>
             <p>Описание: {product.description}.</p>
+            <p>Цвет: {product.color}</p>
+            <p>Накопитель: {product.ram}</p>
+            <p>Связь: {product.sim}</p>
             <p><strong>${product.price}</strong></p>
             <Button variant="primary" onClick={addToFavorites}>Добавить в избранные</Button>
             <Button variant="success" onClick={addToCart} className="m-2">В корзину</Button>
