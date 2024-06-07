@@ -21,22 +21,28 @@ function Product() {
         setLoading(false);
       })
       .catch(error => {
-        console.error('Error fetching product data:', error);
+        console.error('Не удалось загрузить страницу товара. Ошибка:', error);
         setError(true);
         setLoading(false);
       });
   }, [id]);
 
   const addToFavorites = () => {
-    axios.post('http://localhost:5000/favorites', product);
+    axios.post('http://localhost:5000/favorites', product).then(r =>
+        console.error("Не удалось добавить товар в Избранные! Ошибка: ", r));
   };
 
   const addToCart = () => {
-    axios.post('http://localhost:5000/cart', product);
+    axios.post('http://localhost:5000/cart', product).then(r =>
+        console.error("Не удалось добавить товар в Корзину! Ошибка: ", r));
   };
 
-  if (loading) return <div>Загрузка...</div>;
-  if (error || !product) return <div>Товар не найден</div>;
+  if (loading) {
+    return <div>Загрузка...</div>;
+  }
+  if (error || !product) {
+    return <div>Товар не найден</div>;
+  }
 
   return (
     <Container className="d-flex flex-column flex-grow-1">

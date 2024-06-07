@@ -7,10 +7,15 @@ import { motion } from 'framer-motion';
 function ProductList({ limit, searchTerm, category, products }) {
   const [allProducts, setAllProducts] = useState([]);
   const [displayedProducts, setDisplayedProducts] = useState([]);
+  const [favoriteProducts, setFavoriteProducts] = useState([]);
 
   useEffect(() => {
     axios.get('http://localhost:5000/products').then((response) => {
       setAllProducts(response.data);
+    });
+
+    axios.get('http://localhost:5000/favorites').then((response) => {
+      setFavoriteProducts(response.data);
     });
   }, []);
 
@@ -32,12 +37,25 @@ function ProductList({ limit, searchTerm, category, products }) {
     setDisplayedProducts(filteredProducts);
   }, [limit, searchTerm, category, products, allProducts]);
 
+  const isFavorite = (productId) => {
+    return favoriteProducts.some(product => product.id === productId);
+  };
+
+  const removeFromFavorites = (productId) => {
+    axios.delete(`http://localhost:5000/favorites/${productId}`)
+      .then(() => {
+        setFavoriteProducts(favoriteProducts.filter(product => product.id !== productId));
+      })
+      .catch(error => {
+        console.error('Не удалось добавить товар в избранные. Ошибка:', error);
+      });
+  };
+
   return (
     <div className="d-flex flex-wrap">
       {displayedProducts.map(product => (
-        <motion.div key={product.id} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} 
-          transition={{ duration: 0.5 }} className="m-2"
-        >
+        <motion.div key={product.id} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }} className="m-2">
           <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={`/${product.image}`} />
             <Card.Body>
@@ -46,6 +64,8 @@ function ProductList({ limit, searchTerm, category, products }) {
               <Card.Text><strong>${product.price}</strong></Card.Text>
               <Button as={Link} to={`/product/${product.id}`} variant="primary">Купить</Button>
               <Button as={Link} to={`/product/${product.id}`} variant="success" className="m-2">В корзину</Button>
+              {isFavorite(product.id) ? (<Button variant="danger" onClick={() =>
+                    removeFromFavorites(product.id)}>Убрать из избранных</Button>) : (<p>Товар не в избранном</p>)}
             </Card.Body>
           </Card>
         </motion.div>

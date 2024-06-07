@@ -14,12 +14,13 @@ function Cart() {
         updateTotal(response.data);
       })
       .catch(error => {
-        console.error('Error fetching cart data:', error);
+        console.error('Не удалось загрузить страницу корзины. Ошибка:', error);
       });
   }, []);
 
   const updateTotal = (cartItems) => {
-    const totalCost = cartItems.reduce((sum, product) => sum + (parseFloat(product.price) * parseInt(product.quantity, 10)), 0);
+    const totalCost = cartItems.reduce((sum, product) =>
+        sum + (parseFloat(product.price) * parseInt(product.quantity, 10)), 0);
     setTotal(isNaN(totalCost) ? 0 : totalCost);
   };
 
@@ -31,7 +32,7 @@ function Cart() {
         updateTotal(updatedCart);
       })
       .catch(error => {
-        console.error('Error removing product from cart:', error);
+        console.error('Не удалось удалить товар из корзины. Ошибка:', error);
       });
   };
 
@@ -50,7 +51,7 @@ function Cart() {
 
     axios.put(`http://localhost:5000/cart/${productId}`, updatedProduct)
       .catch(error => {
-        console.error('Error updating product quantity:', error);
+        console.error('Не удалось обновить количество товара в корзине. Ошибка:', error);
       });
   };
 
@@ -77,9 +78,11 @@ function Cart() {
                       <td>${product.price}</td>
                       <td>
                         <Form.Control type="number" value={product.quantity} min="1"
-                          onChange={(e) => updateQuantity(product.id, parseInt(e.target.value, 10))}/>
+                          onChange={(e) =>
+                              updateQuantity(product.id, parseInt(e.target.value, 10))}/>
                       </td>
-                      <td><Button variant="danger" onClick={() => removeFromCart(product.id)}>Удалить</Button></td>
+                      <td><Button variant="danger" onClick={() =>
+                          removeFromCart(product.id)}>Удалить</Button></td>
                     </tr>
                   ))}
                 </tbody>
