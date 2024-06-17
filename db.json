@@ -18,7 +18,7 @@
       "price": 799,
       "description": "The latest iPhone with advanced features",
       "ram": "128GB",
-      "color": "Blue",
+      "color": "Midnight",
       "sim": "Dual-Sim",
       "image": "images/iphone14.jpg"
     },
@@ -29,7 +29,7 @@
       "price": 999,
       "description": "The professional iPhone with enhanced camera",
       "ram": "256GB",
-      "color": "Deep Purple",
+      "color": "Graphite",
       "sim": "Dual-Sim",
       "image": "images/iphone14pro.jpg"
     },
@@ -40,7 +40,7 @@
       "price": 1099,
       "description": "The ultimate iPhone with a larger display",
       "ram": "512GB",
-      "color": "Space Black",
+      "color": "Silver",
       "sim": "Dual-Sim",
       "image": "images/iphone14promax.jpg"
     },
@@ -62,7 +62,7 @@
       "price": 999,
       "description": "The professional iPhone with enhanced camera",
       "ram": "256GB",
-      "color": "Sierra Blue",
+      "color": "Graphite",
       "sim": "Dual-Sim",
       "image": "images/iphone13pro.jpg"
     },
@@ -73,7 +73,7 @@
       "price": 1099,
       "description": "The ultimate iPhone with a larger display",
       "ram": "512GB",
-      "color": "Graphite",
+      "color": "Silver",
       "sim": "Dual-Sim",
       "image": "images/iphone13promax.jpg"
     },
@@ -83,8 +83,8 @@
       "category": "iPhone 12 Series",
       "price": 699,
       "description": "The previous new generation iPhone 12",
-      "ram": "128GB",
-      "color": "White",
+      "ram": "64GB",
+      "color": "Blue",
       "sim": "Dual-Sim",
       "image": "images/iphone12.jpg"
     },
@@ -95,7 +95,7 @@
       "price": 899,
       "description": "The professional iPhone of the previous generation",
       "ram": "128GB",
-      "color": "Graphite",
+      "color": "Pacific Blue",
       "sim": "Dual-Sim",
       "image": "images/iphone12pro.jpg"
     },
@@ -117,7 +117,7 @@
       "price": 599,
       "description": "The affordable iPhone with essential features",
       "ram": "64GB",
-      "color": "Yellow",
+      "color": "Black",
       "sim": "Dual-Sim",
       "image": "images/iphone11.jpg"
     },
@@ -128,7 +128,7 @@
       "price": 799,
       "description": "The professional iPhone with a powerful camera",
       "ram": "128GB",
-      "color": "Midnight Green",
+      "color": "Green",
       "sim": "Dual-Sim",
       "image": "images/iphone11pro.jpg"
     },
@@ -139,7 +139,7 @@
       "price": 899,
       "description": "The ultimate iPhone with the largest display",
       "ram": "256GB",
-      "color": "Gold",
+      "color": "Yellow",
       "sim": "Dual-Sim",
       "image": "images/iphone11promax.jpg"
     },
@@ -150,8 +150,8 @@
       "price": 399,
       "description": "The budget-friendly iPhone with modern performance",
       "ram": "64GB",
-      "color": "Midnight",
-      "sim": "Sim",
+      "color": "Red",
+      "sim": "Dual-Sim",
       "image": "images/iphonese.jpg"
     }
   ],
@@ -171,46 +171,6 @@
       "price": 999,
       "description": "The professional iPhone with enhanced camera",
       "image": "images/iphone13pro.jpg"
-    }
-  ],
-  "cart": [
-    {
-      "id": "2",
-      "name": "iPhone 13 Pro",
-      "category": "iPhone 13 Series",
-      "price": 999,
-      "description": "The professional iPhone with enhanced camera",
-      "ram": "256GB",
-      "color": "Sierra Blue",
-      "sim": "Dual-Sim",
-      "image": "images/iphone13pro.jpg",
-      "quantity": 1
-    },
-    {
-      "id": "0",
-      "name": "iPhone 15 Pro Max",
-      "category": "iPhone 15 Series",
-      "price": 1799,
-      "description": "The latest iPhone with advanced features",
-      "ram": "1TB",
-      "color": "Natural Titanium",
-      "sim": "Dual-Sim",
-      "image": "images/iphone15promax.jpg",
-      "quantity": 1
-    }
-  ]
-{
-  "products": [
-    {
-      "id": "0",
-      "name": "iPhone 15 Pro Max",
-      "category": "iPhone 15 Series",
-      "price": 1799,
-      "description": "The latest iPhone with advanced features",
-      "ram": "1TB",
-      "color": "Natural Titanium",
-      "sim": "Dual-Sim",
-      "image": "images/iphone15promax.jpg"
     },
     {
       "id": "11",
@@ -219,159 +179,9 @@
       "price": 799,
       "description": "The latest iPhone with advanced features",
       "ram": "128GB",
-      "color": "Blue",
+      "color": "Midnight",
       "sim": "Dual-Sim",
       "image": "images/iphone14.jpg"
-    },
-    {
-      "id": "12",
-      "name": "iPhone 14 Pro",
-      "category": "iPhone 14 Series",
-      "price": 999,
-      "description": "The professional iPhone with enhanced camera",
-      "ram": "256GB",
-      "color": "Deep Purple",
-      "sim": "Dual-Sim",
-      "image": "images/iphone14pro.jpg"
-    },
-    {
-      "id": "13",
-      "name": "iPhone 14 Pro Max",
-      "category": "iPhone 14 Series",
-      "price": 1099,
-      "description": "The ultimate iPhone with a larger display",
-      "ram": "512GB",
-      "color": "Space Black",
-      "sim": "Dual-Sim",
-      "image": "images/iphone14promax.jpg"
-    },
-    {
-      "id": "1",
-      "name": "iPhone 13",
-      "category": "iPhone 13 Series",
-      "price": 799,
-      "description": "The latest iPhone with advanced features",
-      "ram": "128GB",
-      "color": "Midnight",
-      "sim": "Sim",
-      "image": "images/iphone13.jpg"
-    },
-    {
-      "id": "2",
-      "name": "iPhone 13 Pro",
-      "category": "iPhone 13 Series",
-      "price": 999,
-      "description": "The professional iPhone with enhanced camera",
-      "ram": "256GB",
-      "color": "Sierra Blue",
-      "sim": "Dual-Sim",
-      "image": "images/iphone13pro.jpg"
-    },
-    {
-      "id": "3",
-      "name": "iPhone 13 Pro Max",
-      "category": "iPhone 13 Series",
-      "price": 1099,
-      "description": "The ultimate iPhone with a larger display",
-      "ram": "512GB",
-      "color": "Graphite",
-      "sim": "Dual-Sim",
-      "image": "images/iphone13promax.jpg"
-    },
-    {
-      "id": "4",
-      "name": "iPhone 12",
-      "category": "iPhone 12 Series",
-      "price": 699,
-      "description": "The previous new generation iPhone 12",
-      "ram": "128GB",
-      "color": "White",
-      "sim": "Dual-Sim",
-      "image": "images/iphone12.jpg"
-    },
-    {
-      "id": "5",
-      "name": "iPhone 12 Pro",
-      "category": "iPhone 12 Series",
-      "price": 899,
-      "description": "The professional iPhone of the previous generation",
-      "ram": "128GB",
-      "color": "Graphite",
-      "sim": "Dual-Sim",
-      "image": "images/iphone12pro.jpg"
-    },
-    {
-      "id": "6",
-      "name": "iPhone 12 Pro Max",
-      "category": "iPhone 12 Series",
-      "price": 999,
-      "description": "The ultimate iPhone of the previous generation",
-      "ram": "256GB",
-      "color": "Gold",
-      "sim": "Dual-Sim",
-      "image": "images/iphone12promax.jpg"
-    },
-    {
-      "id": "7",
-      "name": "iPhone 11",
-      "category": "iPhone 11 Series",
-      "price": 599,
-      "description": "The affordable iPhone with essential features",
-      "ram": "64GB",
-      "color": "Yellow",
-      "sim": "Dual-Sim",
-      "image": "images/iphone11.jpg"
-    },
-    {
-      "id": "8",
-      "name": "iPhone 11 Pro",
-      "category": "iPhone 11 Series",
-      "price": 799,
-      "description": "The professional iPhone with a powerful camera",
-      "ram": "128GB",
-      "color": "Midnight Green",
-      "sim": "Dual-Sim",
-      "image": "images/iphone11pro.jpg"
-    },
-    {
-      "id": "9",
-      "name": "iPhone 11 Pro Max",
-      "category": "iPhone 11 Series",
-      "price": 899,
-      "description": "The ultimate iPhone with the largest display",
-      "ram": "256GB",
-      "color": "Gold",
-      "sim": "Dual-Sim",
-      "image": "images/iphone11promax.jpg"
-    },
-    {
-      "id": "10",
-      "name": "iPhone SE (2022)",
-      "category": "iPhone SE",
-      "price": 399,
-      "description": "The budget-friendly iPhone with modern performance",
-      "ram": "64GB",
-      "color": "Midnight",
-      "sim": "Sim",
-      "image": "images/iphonese.jpg"
-    }
-  ],
-  "favorites": [
-    {
-      "id": "0",
-      "name": "iPhone 13 Pro Max",
-      "category": "iPhone 13 Series",
-      "price": 1099,
-      "description": "The ultimate iPhone with a larger display",
-      "image": "images/iphone13promax.jpg"
-    },
-    {
-      "id": "2",
-      "name": "iPhone 13 Pro",
-      "category": "iPhone 13 Series",
-      "price": 999,
-      "description": "The professional iPhone with enhanced camera",
-      "image": "images/iphone13pro.jpg"
     }
   ],
   "cart": [
@@ -382,21 +192,9 @@
       "price": 999,
       "description": "The professional iPhone with enhanced camera",
       "ram": "256GB",
-      "color": "Sierra Blue",
+      "color": "Graphite",
       "sim": "Dual-Sim",
       "image": "images/iphone13pro.jpg",
-      "quantity": 1
-    },
-    {
-      "id": "0",
-      "name": "iPhone 15 Pro Max",
-      "category": "iPhone 15 Series",
-      "price": 1799,
-      "description": "The latest iPhone with advanced features",
-      "ram": "1TB",
-      "color": "Natural Titanium",
-      "sim": "Dual-Sim",
-      "image": "images/iphone15promax.jpg",
       "quantity": 1
     }
   ]

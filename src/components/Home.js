@@ -1,7 +1,7 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import ProductList from './ProductList';
 import ContactForm from './ContactForm';
-import { Container, Row, Col } from 'react-bootstrap';
 
 function Home() {
   return (
