@@ -1,3 +1,108 @@
+# iPhone Store
+
+This is a React-based web application for an online iPhone store. It includes features like a product catalog, shopping cart, favorite products, and a contact form.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/EfimBulien/app-store.git
+    cd app-store
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Start the development server:
+    ```bash
+    npm start
+    ```
+
+4. Ensure the backend server is running (this example assumes you have a JSON server or another backend setup):
+    ```bash
+    npm run server
+    ```
+
+## Usage
+
+- Navigate to the homepage to see the product catalog.
+- Use the search bar and category filter to find specific products.
+- Add products to your cart or favorites.
+- View your cart and adjust quantities or remove items.
+- Submit the contact form to send a message via EmailJS.
+
+## Features
+
+- **Product Catalog**: Browse a list of products with details.
+- **Search and Filter**: Search for products by name and filter by category.
+- **Shopping Cart**: Add products to the cart, update quantities, and view the total price.
+- **Favorites**: Mark products as favorites and view them separately.
+- **Contact Form**: Submit messages through a contact form with EmailJS integration.
+- **Animations**: Smooth animations using `framer-motion`.
+
+## Technologies Used
+
+- **React**: JavaScript library for building user interfaces.
+- **React Bootstrap**: UI framework for responsive design.
+- **React Hook Form**: Library for managing forms in React.
+- **Axios**: Promise-based HTTP client for making API requests.
+- **EmailJS**: Service for sending emails directly from JavaScript applications.
+- **Framer Motion**: Library for animations.
+- **JSON Server**: Simple backend for serving data from a JSON file.
+
+## Project Structure
+
+/src
+/components
+- Header.js
+- Footer.js
+- ProductList.js
+- Catalog.js
+- Cart.js
+- ContactForm.js
+/assets
+- styles.css
+
+    App.js
+    index.js
+    /db.json
+
+
+- `components`: Contains all the React components used in the project.
+- `assets`: Contains static files like CSS styles.
+- `App.js`: The main app component.
+- `index.js`: Entry point of the React application.
+- `db.json`: Mock database for products and cart data.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
