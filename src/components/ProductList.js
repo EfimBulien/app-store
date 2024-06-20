@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import axios from 'axios';
+
 
 function ProductList({ limit, searchTerm, category, products }) {
-  const [allProducts, setAllProducts] = useState([]);
+
   const [displayedProducts, setDisplayedProducts] = useState([]);
+  const [favoriteProducts, setFavoriteProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
 
   useEffect(() => {
     axios.get('http://localhost:5000/products').then((response) => {
       setAllProducts(response.data);
+    });
+
+    axios.get('http://localhost:5000/favorites').then((response) => {
+      setFavoriteProducts(response.data);
     });
   }, []);
 
@@ -25,10 +32,26 @@ function ProductList({ limit, searchTerm, category, products }) {
       filteredProducts = filteredProducts.filter(product => product.category === category);
     }
 
-    if (limit) filteredProducts = filteredProducts.slice(0, limit);
+    if (limit) {
+      filteredProducts = filteredProducts.slice(0, limit);
+    }
 
     setDisplayedProducts(filteredProducts);
   }, [limit, searchTerm, category, products, allProducts]);
+
+  const isFavorite = (productId) => {
+    return favoriteProducts.some(product => product.id === productId);
+  };
+
+  const removeFromFavorites = (productId) => {
+    axios.delete(`http://localhost:5000/favorites/${productId}`)
+      .then(() => {
+        setFavoriteProducts(favoriteProducts.filter(product => product.id !== productId));
+      })
+      .catch(error => {
+        console.error('Не удалось добавить товар в избранные. Ошибка:', error);
+      });
+  };
 
   return (
     <div className="d-flex flex-wrap">
@@ -43,6 +66,8 @@ function ProductList({ limit, searchTerm, category, products }) {
               <Card.Text><strong>${product.price}</strong></Card.Text>
               <Button as={Link} to={`/product/${product.id}`} variant="primary">Купить</Button>
               <Button as={Link} to={`/product/${product.id}`} variant="success" className="m-2">В корзину</Button>
+              {isFavorite(product.id) ? (<Button variant="danger" onClick={() =>
+                    removeFromFavorites(product.id)}>Убрать из избранных</Button>) : (<p>Товар не в избранном</p>)}
             </Card.Body>
           </Card>
         </motion.div>

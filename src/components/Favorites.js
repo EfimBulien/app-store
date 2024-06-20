@@ -1,9 +1,10 @@
+import {Container, Row, Col} from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Container, Row, Col } from 'react-bootstrap';
 import ProductList from './ProductList';
+import axios from 'axios';
 
 function Favorites() {
+
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
@@ -12,7 +13,7 @@ function Favorites() {
         setFavorites(response.data);
       })
       .catch(error => {
-        console.error('Error fetching favorites:', error);
+        console.error('Не удалось загрузить избранные товары. Ошибка:', error);
       });
   }, []);
 
@@ -21,9 +22,7 @@ function Favorites() {
       <Row className="my-4">
         <Col>
           <h2>Избранные товары</h2>
-          {favorites.length > 0 ? (
-            <ProductList products={favorites} />
-          ) : ( <p>Нет избранных товаров.</p> )}
+          {favorites.length > 0 ? (<ProductList products={favorites} />) : (<p>Нет избранных товаров.</p>)}
         </Col>
       </Row>
     </Container>

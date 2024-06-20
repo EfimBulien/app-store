@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
 function Product() {
+
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -13,22 +14,36 @@ function Product() {
   useEffect(() => {
     axios.get(`http://localhost:5000/products?id=${id}`)
       .then(response => {
-        if (response.data.length > 0) setProduct(response.data[0]);
-        else setError(true);
+        if (response.data.length > 0) {
+          setProduct(response.data[0]);
+        } else {
+          setError(true);
+        }
         setLoading(false);
       })
       .catch(error => {
-        console.error('Error fetching product data:', error);
+        console.error('Не удалось загрузить страницу товара. Ошибка:', error);
         setError(true);
         setLoading(false);
       });
   }, [id]);
 
-  const addToFavorites = () => axios.post('http://localhost:5000/favorites', product);
-  const addToCart = () => axios.post('http://localhost:5000/cart', product);
+  const addToFavorites = () => {
+    axios.post('http://localhost:5000/favorites', product).then(r =>
+        console.error("Не удалось добавить товар в избранные. Ошибка: ", r));
+  };
 
-  if (loading) return <div>Загрузка...</div>;
-  if (error || !product) return <div>Товар не найден</div>;
+  const addToCart = () => {
+    axios.post('http://localhost:5000/cart', product).then(r =>
+        console.error("Не удалось добавить товар в корзину. Ошибка: ", r));
+  };
+
+  if (loading) {
+    return <div>Загрузка...</div>;
+  }
+  if (error || !product) {
+    return <div>Товар не найден.</div>;
+  }
 
   return (
     <Container className="d-flex flex-column flex-grow-1">
