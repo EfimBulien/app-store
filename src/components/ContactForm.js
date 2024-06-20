@@ -19,11 +19,9 @@ function ContactForm() {
 
     emailjs.send('apple-store-project', 'template_a9ice16', templateParams, 'iy6f9MZAEZbnI3x2y')
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Сообщение отправлено успешно!');
+        console.log('Сообщение отправлено успешно!', response.status, response.text);
       }, (error) => {
-        console.log('FAILED...', error);
-        alert('Ошибка при отправке сообщения.');
+        console.error('Ошибка при отправке сообщения.', error);
       });
 
     setSubmitted(true);

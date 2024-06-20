@@ -6,7 +6,6 @@ import axios from 'axios';
 
 
 function ProductList({ limit, searchTerm, category, products }) {
-
   const [displayedProducts, setDisplayedProducts] = useState([]);
   const [favoriteProducts, setFavoriteProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);

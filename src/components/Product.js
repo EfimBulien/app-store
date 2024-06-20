@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 
 function Product() {
-
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);

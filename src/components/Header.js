@@ -5,11 +5,8 @@ import { motion } from 'framer-motion';
 
 function Header() {
   return (
-    <motion.div
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ type: 'spring', stiffness: 50, duration: 0.5 }}
-    >
+    <motion.div initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
+    transition={{ type: 'spring', stiffness: 50, duration: 0.5 }}>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand as={Link} to="/">iPhone Store</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -20,7 +17,8 @@ function Header() {
             <Nav.Link as={Link} to="/favorites">Избранное</Nav.Link>
             <Nav.Link as={Link} to="/cart">Корзина</Nav.Link>
             <Nav.Link>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                className="bi bi-person-fill" viewBox="0 0 16 16">
                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
               </svg>
             </Nav.Link>
