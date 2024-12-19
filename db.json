@@ -165,12 +165,59 @@
       "image": "images/iphone13promax.jpg"
     },
     {
-      "id": "2",
-      "name": "iPhone 13 Pro",
-      "category": "iPhone 13 Series",
-      "price": 999,
-      "description": "The professional iPhone with enhanced camera",
-      "image": "images/iphone13pro.jpg"
+      "id": "11",
+      "name": "iPhone 14",
+      "category": "iPhone 14 Series",
+      "price": 799,
+      "description": "The latest iPhone with advanced features",
+      "ram": "128GB",
+      "color": "Midnight",
+      "sim": "Dual-Sim",
+      "image": "images/iphone14.jpg"
+    },
+    {
+      "id": "11",
+      "name": "iPhone 14",
+      "category": "iPhone 14 Series",
+      "price": 799,
+      "description": "The latest iPhone with advanced features",
+      "ram": "128GB",
+      "color": "Midnight",
+      "sim": "Dual-Sim",
+      "image": "images/iphone14.jpg"
+    },
+    {
+      "id": "11",
+      "name": "iPhone 14",
+      "category": "iPhone 14 Series",
+      "price": 799,
+      "description": "The latest iPhone with advanced features",
+      "ram": "128GB",
+      "color": "Midnight",
+      "sim": "Dual-Sim",
+      "image": "images/iphone14.jpg"
+    },
+    {
+      "id": "11",
+      "name": "iPhone 14",
+      "category": "iPhone 14 Series",
+      "price": 799,
+      "description": "The latest iPhone with advanced features",
+      "ram": "128GB",
+      "color": "Midnight",
+      "sim": "Dual-Sim",
+      "image": "images/iphone14.jpg"
+    },
+    {
+      "id": "11",
+      "name": "iPhone 14",
+      "category": "iPhone 14 Series",
+      "price": 799,
+      "description": "The latest iPhone with advanced features",
+      "ram": "128GB",
+      "color": "Midnight",
+      "sim": "Dual-Sim",
+      "image": "images/iphone14.jpg"
     },
     {
       "id": "11",

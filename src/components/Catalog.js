@@ -23,12 +23,12 @@ function Catalog() {
           <h2>Каталог</h2>
           <Form>
             <Form.Group controlId="search" className="mt-3">
-              <Form.Label>Поиск</Form.Label>
+              <Form.Label column={}>Поиск</Form.Label>
               <Form.Control type="text" placeholder="Найти..." value={searchTerm} onChange={e =>
                   setSearchTerm(e.target.value)}/>
             </Form.Group>
             <Form.Group controlId="category" className="mt-3">
-              <Form.Label>Категория</Form.Label>
+              <Form.Label column={}>Категория</Form.Label>
               <Form.Control as="select" value={selectedCategory} onChange={e =>
                   setSelectedCategory(e.target.value)}>
                 <option value="">Все</option> {categories.map((category, index) =>
